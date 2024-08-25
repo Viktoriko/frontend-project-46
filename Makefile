@@ -1,11 +1,8 @@
-install:
-	npm ci
+install: deps-install
+	npx simple-git-hooks
 
-gendiff:
-	node bin/gendiff.js
-
-gendiff-help:
-	node bin/gendiff.js -h
+deps-install:
+	npm ci --legacy-peer-deps
 
 lint:
 	npx eslint .
