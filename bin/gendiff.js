@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { Command } from 'commander';
-import readFile from '../src/actions/readFile.js';
+import compareFiles from '../src/actions/compareFiles.js';
 
 const program = new Command();
 
@@ -10,5 +10,7 @@ program
   .argument('<filepath1>', 'the path to the file being compared')
   .argument('<filepath2>', 'the path to the file being compared with')
   .option('-f, --format <type>', 'output format')
-  .action(readFile)
+  .action(compareFiles)
   .parse();
+
+export default program;

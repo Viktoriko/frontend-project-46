@@ -1,6 +1,6 @@
 import getFileData from '../getFileData.js';
 
-const readFile = (filepath1, filepath2) => {
+const compareFiles = (filepath1, filepath2) => {
   const fileData1 = getFileData(filepath1);
   const fileData2 = getFileData(filepath2);
 
@@ -8,4 +8,4 @@ const readFile = (filepath1, filepath2) => {
   console.log(fileData2);
 };
 
-export default readFile;
+export default compareFiles;
